@@ -56,9 +56,13 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
-
 filetype plugin indent on
 
 set pastetoggle=<F2>
 
+let mapleader="ß"
 
+set statusline=%{ruby_debugger#statusline()}
+
+let g:ruby_debugger_spec_path = 'bundle exec rspec'
+let g:ruby_debugger_default_script = 'script/rails server' 
