@@ -22,3 +22,6 @@
 [submodule "bundle/lustyjuggler"]
 	path = bundle/lustyjuggler
 	url = https://github.com/vim-scripts/LustyJuggler.git
+[submodule "bundle/vim-ruby-debugger"]
+	path = bundle/vim-ruby-debugger
+	url = https://github.com/astashov/vim-ruby-debugger.git
