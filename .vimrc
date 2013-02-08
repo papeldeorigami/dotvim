@@ -27,9 +27,8 @@ set number
 " do not ask to save file before switching buffers
 set hidden
 
-" switch between buffers
-nnoremap <silent> <C-b> :bn<CR>
-nnoremap <silent> <S-b> :bp<CR>
+" shortcut for bufexplorer
+nnoremap <silent> <C-b> :BufExplorer<CR>
 
 "for just following the link
 nnoremap <buffer> <C-l> <C-]>
@@ -71,9 +70,9 @@ filetype plugin indent on
 
 set pastetoggle=<F2>
 
-let mapleader="ß"
+let mapleader=" "
 
-set statusline=%{ruby_debugger#statusline()}
+:set statusline=%{ruby_debugger#statusline()}%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
 
 let g:ruby_debugger_spec_path = 'bundle exec rspec -d'
 let g:ruby_debugger_default_script = 'script/rails server' 
