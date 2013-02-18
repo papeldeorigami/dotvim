@@ -21,9 +21,6 @@ syntax on
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
-" show line numbers
-set number
-
 " do not ask to save file before switching buffers
 set hidden
 
@@ -72,7 +69,20 @@ set pastetoggle=<F2>
 
 let mapleader=" "
 
-:set statusline=%{ruby_debugger#statusline()}%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+" http://got-ravings.blogspot.com.br/2008/08/vim-pr0n-making-statuslines-that-own.html
+" jamessan's
+set statusline=   " clear the statusline for when vimrc is reloaded
+set statusline+=%-3.3n\                      " buffer number
+set statusline+=%f\                          " file name
+set statusline+=%h%m%r%w                     " flags
+set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+set statusline+=%{&fileformat}]              " file format
+set statusline+=%=                           " right align
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\ " highlight
+set statusline+=%b,0x%-8B\                   " current char
+set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+set statusline+=%{ruby_debugger#statusline()}
 
 let g:ruby_debugger_spec_path = 'bundle exec rspec -d'
 let g:ruby_debugger_default_script = 'script/rails server' 
@@ -82,7 +92,7 @@ let g:ruby_debugger_no_maps = 1
 noremap <leader>b  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.toggle_breakpoint()<CR>
 noremap <leader>v  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_variables()<CR>
 noremap <leader>m  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_breakpoints()<CR>
-noremap <leader>t  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_frames()<CR>
+noremap <leader>F  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_frames()<CR>
 noremap <leader>s  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.step()<CR>
 noremap <leader>f  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.finish()<CR>
 noremap <leader>n  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.next()<CR>
