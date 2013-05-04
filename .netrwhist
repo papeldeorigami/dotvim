@@ -1,9 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/isarivan/.launchy'
-let g:netrw_dirhist_2='/home/isarivan/.config/autostart'
-let g:netrw_dirhist_3='/home/isarivan/.vim'
-let g:netrw_dirhist_4='/home/isarivan/Dropbox/sindik/htdocs/img'
-let g:netrw_dirhist_5='/home/isarivan/.rvm/gems/ruby-1.9.3-p374/gems/social_stream-0.30.0/documents/app/views'
-let g:netrw_dirhist_6='/boot'
-let g:netrw_dirhist_7='/home/isarivan/sindik/app/views/devide'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/isarivan/vagrant-boxes/iso'
+let g:netrw_dirhist_2='/home/isarivan/vagrant-boxes/definitions'

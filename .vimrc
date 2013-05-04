@@ -17,10 +17,6 @@ syntax on
                 map <C-Z> :emenu <C-]> 
                 map! <C-Z> <C-O>:emenu <C-]> 
         endif 
-" load NERDTree after vim initialization is complete
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
 " do not ask to save file before switching buffers
 set hidden
 
@@ -99,3 +95,9 @@ noremap <leader>n  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger
 noremap <leader>c  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.continue()<CR>
 noremap <leader>e  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
 noremap <leader>d  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>
+
+" load NERDTree after vim initialization is complete
+let b:NERDTreeStatusline=-1
+
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
