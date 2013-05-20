@@ -7,34 +7,11 @@ call pathogen#helptags()
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+source ~/.vim/.vundle.vim
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'tpope/vim-rvm.git'
-Bundle 'wincent/Command-T.git'
-Bundle 'astashov/vim-ruby-debugger.git'
-Bundle 'corntrace/bufexplorer'
-Bundle 'puppetlabs/puppet-syntax-vim.git'
 
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'YankRing.vim'
-
-Bundle 'bufkill.vim'
-Bundle 'ctags.vim'
-
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+" load neocomplcache plugin settings
+source ~/.vim/.neocomplcache.vim
 
 " ---------------- end Vundle modules -------------------
 
@@ -100,36 +77,8 @@ set pastetoggle=<F2>
 
 let mapleader=" "
 
-" http://got-ravings.blogspot.com.br/2008/08/vim-pr0n-making-statuslines-that-own.html
-" jamessan's
-set statusline=   " clear the statusline for when vimrc is reloaded
-set statusline+=%-3.3n\                      " buffer number
-set statusline+=%f\                          " file name
-set statusline+=%h%m%r%w                     " flags
-set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
-set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
-set statusline+=%{&fileformat}]              " file format
-set statusline+=%=                           " right align
-set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\ " highlight
-set statusline+=%b,0x%-8B\                   " current char
-set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
-set statusline+=%{ruby_debugger#statusline()}
-
-let g:ruby_debugger_spec_path = 'bundle exec rspec -d'
-let g:ruby_debugger_default_script = 'script/rails server' 
-let g:ruby_debugger_builtin_sender = 0
-let g:ruby_debugger_debug_mode = 1
-let g:ruby_debugger_no_maps = 1
-noremap <leader>b  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.toggle_breakpoint()<CR>
-noremap <leader>v  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_variables()<CR>
-noremap <leader>m  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_breakpoints()<CR>
-noremap <leader>F  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_frames()<CR>
-noremap <leader>s  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.step()<CR>
-noremap <leader>f  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.finish()<CR>
-noremap <leader>n  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.next()<CR>
-noremap <leader>c  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.continue()<CR>
-noremap <leader>e  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
-noremap <leader>d  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>
+source ~/.vim/.statusline.vim
+source ~/.vim/.vim-ruby-debugger.vim
 
 " load NERDTree after vim initialization is complete
 let b:NERDTreeStatusline=-1
