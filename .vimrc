@@ -85,3 +85,14 @@ let b:NERDTreeStatusline=-1
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+
+" set colorscheme
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+if has('gui_running')
+  colorscheme Monokai-Refined
+else
+  colorscheme distinguished
+endif
