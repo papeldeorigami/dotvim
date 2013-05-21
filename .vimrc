@@ -17,6 +17,7 @@ source ~/.vim/.neocomplcache.vim
 
 " activate syntax highlight
 syntax on
+au BufNewFile,BufRead *.deface setlocal ft=html
 
 " activate the wildmenu
 " set wildmenu
