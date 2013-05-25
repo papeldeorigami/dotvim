@@ -21,7 +21,7 @@ endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 " snippets expand key
-imap  <silent><expr><TAB>  neocomplcache#plugin#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : (pumvisible() ? "\<C-e>" : "\<TAB>")
+"imap  <silent><expr><TAB>  neocomplcache#plugin#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : (pumvisible() ? "\<C-e>" : "\<TAB>")
 "imap  <silent><expr><TAB>  neocomplcache#plugin#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<C-e>"
 smap  <TAB>  <RIGHT><Plug>(neocomplcache_snippets_jump)
 inoremap <expr><C-e>     neocomplcache#complete_common_string()

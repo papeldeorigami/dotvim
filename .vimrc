@@ -17,6 +17,8 @@ source ~/.vim/.neocomplcache.vim
 
 " activate syntax highlight
 syntax on
+
+" syntax mapping
 au BufNewFile,BufRead *.deface setlocal ft=html
 
 " activate the wildmenu
@@ -30,16 +32,11 @@ au BufNewFile,BufRead *.deface setlocal ft=html
                 map <C-Z> :emenu <C-]> 
                 map! <C-Z> <C-O>:emenu <C-]> 
         endif 
+
 " do not ask to save file before switching buffers
 set hidden
 
-" shortcut for bufexplorer
-nnoremap <silent> <C-b> :BufExplorer<CR>
-
-"for just following the link
-nnoremap <buffer> <C-l> <C-]>
-"for following the help topic in a new split (often useful)
-nnoremap <buffer> <A-l> <C-w><C-]><C-w>T
+source ~/.vim/.keymaps.vim
 
 " use the X windows clipboard by default
 set clipboard=unnamedplus
@@ -74,9 +71,6 @@ set noswapfile
 
 filetype plugin indent on
 
-set pastetoggle=<F2>
-
-let mapleader=" "
 
 source ~/.vim/.statusline.vim
 source ~/.vim/.vim-ruby-debugger.vim
@@ -97,3 +91,5 @@ if has('gui_running')
 else
   colorscheme distinguished
 endif
+
+
