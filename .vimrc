@@ -3,17 +3,10 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" ---------------- Vundle modules -------------------
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 source ~/.vim/.vundle.vim
-
 
 " load neocomplcache plugin settings
 source ~/.vim/.neocomplcache.vim
-
-" ---------------- end Vundle modules -------------------
 
 " activate syntax highlight
 syntax on
@@ -92,4 +85,9 @@ else
   colorscheme distinguished
 endif
 
+" change cursor shape for gnome terminal
+au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"    
+au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+au VimEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 
