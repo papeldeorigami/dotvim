@@ -28,6 +28,8 @@ Bundle 'Lokaltog/vim-distinguished.git'
 Bundle 'mattn/zencoding-vim.git'
 " Display a list of Tags in a sidebar
 Bundle 'majutsushi/tagbar'
+" automatic closing of quotes, parenthesis, brackets, etc.
+Bundle 'Raimondi/delimitMate.git'
 
 " ----------------------------------
 " vim-scripts repos
@@ -40,6 +42,7 @@ Bundle 'ctags.vim'
 Bundle 'vim-less'
 Bundle 'minibufexpl.vim'
 Bundle 'restart.vim'
+Bundle 'BufOnly.vim'
 
 " ----------------------------------
 " non github repos

@@ -11,6 +11,9 @@ source ~/.vim/.neocomplcache.vim
 " activate syntax highlight
 syntax on
 
+" indicate when leader key is pressed
+set showcmd
+
 " syntax mapping
 au BufNewFile,BufRead *.deface setlocal ft=html
 

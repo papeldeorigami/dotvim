@@ -1,3 +1,5 @@
+let mapleader = " "
+
 " shortcut for bufexplorer
 nnoremap <silent> <C-b> :BufExplorer<CR>
 
