@@ -79,12 +79,11 @@ autocmd VimEnter * wincmd p
 
 
 " set colorscheme
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
 if has('gui_running')
   colorscheme Monokai-Refined
 else
+	" assuming that all terminals have 256 colors
+  set t_Co=256
   colorscheme distinguished
 endif
 
