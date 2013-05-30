@@ -37,6 +37,8 @@ source ~/.vim/.keymaps.vim
 " use the X windows clipboard by default
 set clipboard=unnamedplus
 
+set mouse=a
+
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
