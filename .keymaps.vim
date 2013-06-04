@@ -4,7 +4,7 @@ let mapleader = " "
 nnoremap <silent> <C-b> :BufExplorer<CR>
 
 "shortcut for NERDTree
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 "for just following the link
 nnoremap <buffer> <C-l> <C-]>
@@ -17,7 +17,7 @@ noremap <leader>m  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger
 noremap <leader>F  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.open_frames()<CR>
 noremap <leader>s  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.step()<CR>
 noremap <leader>f  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.finish()<CR>
-noremap <leader>n  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.next()<CR>
+noremap <leader>N  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.next()<CR>
 noremap <leader>c  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.continue()<CR>
 noremap <leader>e  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
 noremap <leader>d  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>

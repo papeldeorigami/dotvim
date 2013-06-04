@@ -76,8 +76,8 @@ source ~/.vim/.vim-ruby-debugger.vim
 " load NERDTree after vim initialization is complete
 let b:NERDTreeStatusline=-1
 
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
 
 
 " set colorscheme

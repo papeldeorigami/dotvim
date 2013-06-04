@@ -41,6 +41,9 @@ Bundle 'mattn/zencoding-vim.git'
 Bundle 'majutsushi/tagbar'
 " automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate.git'
+" Vim functions to run RSpec and Cucumber on the current cursor or file. It
+" also supports Spork and Zeus.
+Bundle 'renderedtext/vim-bdd.git'
 
 " ----------------------------------
 " vim-scripts repos
