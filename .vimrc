@@ -73,12 +73,12 @@ filetype plugin indent on
 source ~/.vim/.statusline.vim
 source ~/.vim/.vim-ruby-debugger.vim
 
-" load NERDTree after vim initialization is complete
+" ---- NERDTree settings ------
 let b:NERDTreeStatusline=-1
-
+" load NERDTree after vim initialization is complete
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
-
+" -----------------------------
 
 " set colorscheme
 if has('gui_running')
@@ -94,4 +94,9 @@ au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-te
 au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 au VimEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+" change cursor for KDE4
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+" load custom tags
+set tags+=~/tags,./tags,./../tags,./*/tags  

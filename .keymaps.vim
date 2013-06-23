@@ -3,8 +3,13 @@ let mapleader = " "
 " shortcut for bufexplorer
 nnoremap <silent> <C-b> :BufExplorer<CR>
 
-"shortcut for NERDTree
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+" shortcuts for NERDTree
+" nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeFind<CR>
+
+" shortcuts for vim-bdd
+map <Leader>; :call RunTest("")<CR>
+map <Leader>' :call RunTestFile("")<CR>
 
 "for just following the link
 nnoremap <buffer> <C-l> <C-]>
@@ -22,7 +27,7 @@ noremap <leader>c  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger
 noremap <leader>e  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
 noremap <leader>d  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>
 
-set pastetoggle=<F2>
+set pastetoggle=<leader>p
 
 " zen coding
 let g:user_zen_expandabbr_key = '<TAB>'
