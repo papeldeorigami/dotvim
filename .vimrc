@@ -85,8 +85,10 @@ if has('gui_running')
   colorscheme Monokai-Refined
 else
 	" assuming that all terminals have 256 colors
-  set t_Co=256
-  colorscheme distinguished
+  if &term !~ 'screen-bce' 
+    set t_Co=256
+    colorscheme distinguished
+  end
 endif
 
 " change cursor shape for gnome terminal

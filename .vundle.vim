@@ -44,6 +44,8 @@ Bundle 'Raimondi/delimitMate.git'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
 Bundle 'renderedtext/vim-bdd.git'
+" Vim ruby refactoring
+Bundle 'ecomba/vim-ruby-refactoring'
 
 " ----------------------------------
 " vim-scripts repos
@@ -57,6 +59,9 @@ Bundle 'vim-less'
 Bundle 'minibufexpl.vim'
 Bundle 'restart.vim'
 Bundle 'BufOnly.vim'
+
+" eclipse-like tasklist
+Bundle 'TaskList.vim'
 
 " ----------------------------------
 " non github repos

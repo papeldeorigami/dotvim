@@ -1,5 +1,8 @@
 let mapleader = " "
 
+" show tasklist
+map <unique> <Leader>l <Plug>TaskList
+
 " shortcut for bufexplorer
 nnoremap <silent> <C-b> :BufExplorer<CR>
 
