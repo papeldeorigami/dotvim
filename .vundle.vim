@@ -46,6 +46,10 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'renderedtext/vim-bdd.git'
 " Vim ruby refactoring
 Bundle 'ecomba/vim-ruby-refactoring'
+" matchit is required by the vim-ruby-refactoring for some operations
+Bundle 'edsono/vim-matchit'
+" comment out code
+Bundle 'scrooloose/nerdcommenter'
 
 " ----------------------------------
 " vim-scripts repos
