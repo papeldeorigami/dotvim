@@ -40,7 +40,16 @@ set clipboard=unnamedplus
 set mouse=a
 
 set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
+
+"set tabstop=4     " uncomment if you want python-styled four spaces
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+set tabstop=2     " uncomment if you want python-styled four spaces
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set smarttab      " insert tabs on the start of a line according to
+                  "    shiftwidth, not tabstop
+
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
@@ -52,8 +61,6 @@ set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
-set smarttab      " insert tabs on the start of a line according to
-                  "    shiftwidth, not tabstop
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
@@ -85,10 +92,10 @@ if has('gui_running')
   colorscheme Monokai-Refined
 else
 	" assuming that all terminals have 256 colors
-  if &term !~ 'screen-bce' 
+	"  if &term !~ 'screen-bce' 
     set t_Co=256
     colorscheme distinguished
-  end
+    " end
 endif
 
 " change cursor shape for gnome terminal
