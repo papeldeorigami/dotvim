@@ -35,6 +35,16 @@ set pastetoggle=<leader>p
 " zen coding
 let g:user_zen_expandabbr_key = '<leader><TAB>'
 
-
 map <leader>c<space> NERDComToggleComment
 
+" Tab navigation
+nnoremap tp :tabprevious<CR>
+nnoremap tn :tabnext<CR>
+nnoremap tt :tabedit<CR>
+nnoremap tc :tabclose<CR>
+
+" Buffer navigation
+nnoremap bp :bprevious<CR>
+nnoremap bn :bnext<CR>
+nnoremap bb :new<CR>
+nnoremap bc :quit<CR>

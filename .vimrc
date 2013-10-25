@@ -14,6 +14,18 @@ syntax on
 " indicate when leader key is pressed
 set showcmd
 
+" folding settings
+set foldcolumn=1
+set foldmethod=indent   "fold based on indent
+"set foldmethod=syntax
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+" save folds on exit
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
+
 " syntax mapping
 au BufNewFile,BufRead *.deface setlocal ft=html
 
@@ -77,7 +89,8 @@ set noswapfile
 filetype plugin indent on
 
 
-source ~/.vim/.statusline.vim
+"source ~/.vim/.statusline.vim
+source ~/.vim/.vim-airline.vim
 source ~/.vim/.vim-ruby-debugger.vim
 
 " ---- NERDTree settings ------

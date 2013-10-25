@@ -26,7 +26,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-rvm.git'
-Bundle 'wincent/Command-T.git'
+"Bundle 'wincent/Command-T.git'
 Bundle 'astashov/vim-ruby-debugger.git'
 Bundle 'corntrace/bufexplorer'
 Bundle 'puppetlabs/puppet-syntax-vim.git'
@@ -50,6 +50,14 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'edsono/vim-matchit'
 " comment out code
 Bundle 'scrooloose/nerdcommenter'
+" Ack search (sudo apt-get install ack-grep) 
+Bundle 'mileszs/ack.vim'
+" lean & mean status/tabline for vim that's light as air
+Bundle 'bling/vim-airline'
+" Fuzzy file, buffer, mru, tag, etc finder
+Bundle 'kien/ctrlp.vim'
+" Syntax checker
+Bundle 'scrooloose/syntastic'
 
 " ----------------------------------
 " vim-scripts repos
