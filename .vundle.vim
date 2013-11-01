@@ -58,7 +58,8 @@ Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 " Syntax checker
 Bundle 'scrooloose/syntastic'
-
+" Cool way to replace surrounder characters
+Bundle 'tpope/vim-surround'
 " ----------------------------------
 " vim-scripts repos
 " ----------------------------------
@@ -74,6 +75,9 @@ Bundle 'BufOnly.vim'
 
 " eclipse-like tasklist
 Bundle 'TaskList.vim'
+
+" Show ctags list
+Bundle 'taglist.vim'
 
 " ----------------------------------
 " non github repos
