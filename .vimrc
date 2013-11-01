@@ -88,7 +88,6 @@ set noswapfile
 
 filetype plugin indent on
 
-
 "source ~/.vim/.statusline.vim
 source ~/.vim/.vim-airline.vim
 source ~/.vim/.vim-ruby-debugger.vim
