@@ -48,3 +48,6 @@ nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
 nnoremap bb :new<CR>
 nnoremap bc :quit<CR>
+
+" CtrlP plugin mapping
+let g:ctrlp_map = '<c-p>'

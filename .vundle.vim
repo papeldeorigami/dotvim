@@ -65,7 +65,7 @@ Bundle 'tpope/vim-surround'
 " ----------------------------------
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'YankRing.vim'
+" Bundle 'YankRing.vim'
 Bundle 'bufkill.vim'
 Bundle 'ctags.vim'
 Bundle 'vim-less'
