@@ -14,6 +14,18 @@ syntax on
 " indicate when leader key is pressed
 set showcmd
 
+"Ever notice a slight lag after typing the leader key + command? This lowers  
+"the timeout.  
+set timeoutlen=500
+
+" Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.  
+if has("autocmd")  
+ augroup myvimrchooks  
+  au!  
+  autocmd bufwritepost .vimrc source ~/.vimrc  
+ augroup END  
+endif  
+
 " folding settings
 set foldcolumn=1
 set foldmethod=indent   "fold based on indent
@@ -67,7 +79,7 @@ set backspace=indent,eol,start
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set number        " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftwidth=4  " numbeDComToggleCommente for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
