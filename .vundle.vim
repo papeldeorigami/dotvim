@@ -36,7 +36,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'jaromero/vim-monokai-refined.git'
 Bundle 'Lokaltog/vim-distinguished.git'
 " fast html coding
-Bundle 'mattn/zencoding-vim.git'
+Bundle 'mattn/emmet-vim.git'
 " Display a list of Tags in a sidebar
 Bundle 'majutsushi/tagbar'
 " automatic closing of quotes, parenthesis, brackets, etc.
