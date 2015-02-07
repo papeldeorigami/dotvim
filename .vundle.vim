@@ -60,6 +60,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 " Cool way to replace surrounder characters
 Bundle 'tpope/vim-surround'
+" Syntax hightlight for jade files
+Bundle 'digitaltoad/vim-jade.git'
 " ----------------------------------
 " vim-scripts repos
 " ----------------------------------
