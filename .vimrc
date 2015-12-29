@@ -3,6 +3,7 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" download and install plugins if folder .vim/bundle is not found
 source ~/.vim/.vundle.vim
 
 " load neocomplcache plugin settings
@@ -20,10 +21,10 @@ set timeoutlen=500
 
 " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.  
 if has("autocmd")  
- augroup myvimrchooks  
-  au!  
-  autocmd bufwritepost .vimrc source ~/.vimrc  
- augroup END  
+   augroup myvimrchooks  
+    au!  
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  augroup END  
 endif  
 
 " folding settings
@@ -102,7 +103,8 @@ filetype plugin indent on
 
 "source ~/.vim/.statusline.vim
 source ~/.vim/.vim-airline.vim
-source ~/.vim/.vim-ruby-debugger.vim
+
+"source ~/.vim/.vim-ruby-debugger.vim
 
 " ---- NERDTree settings ------
 let b:NERDTreeStatusline=-1
@@ -113,23 +115,17 @@ let b:NERDTreeStatusline=-1
 
 " set colorscheme
 if has('gui_running')
-  colorscheme Monokai-Refined
+    colorscheme eclipse
 else
-	" assuming that all terminals have 256 colors
-	"  if &term !~ 'screen-bce' 
+	  " assuming that all terminals have 256 colors
     set t_Co=256
     colorscheme distinguished
-    " end
 endif
 
-" change cursor shape for gnome terminal
-au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"    
-au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-au VimEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-" change cursor for KDE4
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" set gvim font
+if has('gui_running')
+    set gfn=Courier\ 10\ Pitch\ 13
+endif
 
 " load custom tags
 set tags+=~/tags,./tags,./../tags,./*/tags  

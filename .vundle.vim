@@ -12,78 +12,126 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" ----------------------------------
+" Pre-requisites for other plugins
+" ----------------------------------
+
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
 
-" ----------------------------------
-" original repos on github
-" ----------------------------------
-" git support
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'tpope/vim-rvm.git'
-"Bundle 'wincent/Command-T.git'
-Bundle 'astashov/vim-ruby-debugger.git'
-Bundle 'corntrace/bufexplorer'
-Bundle 'puppetlabs/puppet-syntax-vim.git'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neocomplcache'
-" color scheme
-Bundle 'jaromero/vim-monokai-refined.git'
-Bundle 'Lokaltog/vim-distinguished.git'
-" fast html coding
-Bundle 'mattn/emmet-vim.git'
-" Display a list of Tags in a sidebar
-Bundle 'majutsushi/tagbar'
-" automatic closing of quotes, parenthesis, brackets, etc.
-Bundle 'Raimondi/delimitMate.git'
-" Vim functions to run RSpec and Cucumber on the current cursor or file. It
-" also supports Spork and Zeus.
-Bundle 'renderedtext/vim-bdd.git'
-" Vim ruby refactoring
-Bundle 'ecomba/vim-ruby-refactoring'
-" matchit is required by the vim-ruby-refactoring for some operations
-Bundle 'edsono/vim-matchit'
-" comment out code
-Bundle 'scrooloose/nerdcommenter'
-" Ack search (sudo apt-get install ack-grep) 
-Bundle 'mileszs/ack.vim'
-" lean & mean status/tabline for vim that's light as air
-Bundle 'bling/vim-airline'
-" Fuzzy file, buffer, mru, tag, etc finder
-Bundle 'kien/ctrlp.vim'
-" Syntax checker
-Bundle 'scrooloose/syntastic'
-" Cool way to replace surrounder characters
-Bundle 'tpope/vim-surround'
-" Syntax hightlight for jade files
-Bundle 'digitaltoad/vim-jade.git'
-" ----------------------------------
-" vim-scripts repos
-" ----------------------------------
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" Bundle 'YankRing.vim'
-Bundle 'bufkill.vim'
+" needed for auto-completion; run also: "sudo apt-get install exhuberant-ctags"
 Bundle 'ctags.vim'
-Bundle 'vim-less'
-Bundle 'minibufexpl.vim'
-Bundle 'restart.vim'
+
+" vim function library for other plugins
+Bundle 'L9'
+
+" ----------------------------------
+"  Navigation enhancements
+" ----------------------------------
+
+" Directory tree navigation (mapped to <LEADER>n)
+Bundle 'scrooloose/nerdtree.git'
+
+" Press <Leader><Leader>w to jump to any word in the screen
+Bundle 'Lokaltog/vim-easymotion'
+
+" Easier switch between buffers (mapped to <LEADER>b)
+Bundle 'corntrace/bufexplorer'
+
+" (:BUN/:BD/:BW) Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
+Bundle 'bufkill.vim'
+
+" introduces a command to quit all other buffers (:BufOnly)
 Bundle 'BufOnly.vim'
 
-" eclipse-like tasklist
+" Fuzzy file, buffer, mru, tag, etc finder
+Bundle 'ctrlpvim/ctrlp.vim'
+
+" ----------------------------------
+"  Code editing enhancements
+" ----------------------------------
+
+" Auto-completion
+Bundle 'Shougo/neocomplcache'
+
+" Display a list of Tags in a sidebar
+Bundle 'majutsushi/tagbar'
+
+" automatic closing of quotes, parenthesis, brackets, etc.
+Bundle 'Raimondi/delimitMate.git'
+
+" comment out code (ctrl+c+space)
+Bundle 'scrooloose/nerdcommenter'
+
+" Syntax checker
+Bundle 'scrooloose/syntastic'
+
+" Cool way to replace surrounder characters (try cs"' and ds')
+Bundle 'tpope/vim-surround'
+
+" eclipse-like tasklist (TODOs in code)
 Bundle 'TaskList.vim'
 
-" Show ctags list
-Bundle 'taglist.vim'
+" Show ctags list (replaced with TagBar)
+"Bundle 'taglist.vim'
+
+" Expand HTML tags with CTRL+E
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" snippet support (never used)
+"Bundle 'Shougo/neosnippet'
+
+" fast html coding
+"Bundle 'mattn/emmet-vim.git'
+
+" Integration with ruby/rails tools
+"Bundle 'tpope/vim-rails.git'
+"Bundle 'tpope/vim-rvm.git'
+"Bundle 'astashov/vim-ruby-debugger.git'
+" Vim functions to run RSpec and Cucumber on the current cursor or file. It
+" also supports Spork and Zeus.
+"Bundle 'renderedtext/vim-bdd.git'
+" Vim ruby refactoring
+"Bundle 'ecomba/vim-ruby-refactoring'
+" matchit is required by the vim-ruby-refactoring for some operations
+"Bundle 'edsono/vim-matchit'
 
 " ----------------------------------
-" non github repos
+"  External tools integration
 " ----------------------------------
+
+" git support
+Bundle 'tpope/vim-fugitive'
+
+" Ack search (sudo apt-get install ack-grep) 
+"Bundle 'mileszs/ack.vim'
+
+" ----------------------------------
+"  Syntax highlighting
+" ----------------------------------
+
+" Syntax hightlight for jade files
+Bundle 'digitaltoad/vim-jade.git'
+
+" Syntax highlighting for puppet files (SCM)
+Bundle 'puppetlabs/puppet-syntax-vim.git'
+
+" Syntax highlighting for LESS files
+Bundle 'vim-less'
+
+" ----------------------------------
+"  Color schemes and visual
+" ----------------------------------
+
+" color schemes
+"Bundle 'jaromero/vim-monokai-refined.git'
+Bundle 'Lokaltog/vim-distinguished.git'
+Bundle 'vim-scripts/eclipse.vim'
+
+" lean & mean status/tabline for vim that's light as air
+Bundle 'bling/vim-airline'
+
 "...All your other bundles...
 if iCanHazVundle == 0
 	echo "Installing Bundles, please ignore key map error messages"
