@@ -13,10 +13,10 @@ nnoremap <leader>n :NERDTreeFind<CR>
 " easy motion setup - jump to any word on screen
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+map  <leader>/ <Plug>(easymotion-sn)
+omap <leader>/ <Plug>(easymotion-tn)
+"map  n <Plug>(easymotion-next)
+"map  N <Plug>(easymotion-prev)
 
 " toggle comment
 nnoremap <leader>c<space> NERDCommentToggle
