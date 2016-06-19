@@ -1,4 +1,9 @@
-let mapleader = '\'
+let mapleader = "\<Space>"
+
+" Automatically jump to the end of pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 
 " show tasklist
 "map <Leader>l <Plug>TaskList
@@ -73,3 +78,7 @@ nnoremap <a-PageDown> :bnext<CR>
 
 " CtrlP plugin mapping
 "let g:ctrlp_map = '<c-p>'
+
+" Expand selected region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)

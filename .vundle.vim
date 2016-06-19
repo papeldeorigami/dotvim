@@ -2,7 +2,7 @@
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
-	echo "Installing Vundle.."
+	echo "Installing Vundle..."
 	echo ""
 	silent !mkdir -p ~/.vim/bundle
 	!git clone https://www.github.com/gmarik/vundle ~/.vim/bundle/vundle
@@ -21,7 +21,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " needed for auto-completion; run also: "sudo apt-get install exhuberant-ctags"
-Bundle 'ctags.vim'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-easytags'
+
+" Required by vim-tags
+Bundle 'tpope/vim-rvm.git'
 
 " vim function library for other plugins
 Bundle 'L9'
@@ -48,9 +52,15 @@ Bundle 'BufOnly.vim'
 " Fuzzy file, buffer, mru, tag, etc finder
 Bundle 'ctrlpvim/ctrlp.vim'
 
+" expand selection progressively with v
+Bundle 'terryma/vim-expand-region'
+
 " ----------------------------------
 "  Code editing enhancements
 " ----------------------------------
+
+" automatic ctags update on file save
+Bundle 'szw/vim-tags'
 
 " Auto-completion
 Bundle 'Shougo/neocomplcache'
@@ -88,6 +98,7 @@ Bundle 'TaskList.vim'
 " Integration with ruby/rails tools
 "Bundle 'tpope/vim-rails.git'
 "Bundle 'tpope/vim-rvm.git'
+
 "Bundle 'astashov/vim-ruby-debugger.git'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
@@ -119,6 +130,9 @@ Bundle 'puppetlabs/puppet-syntax-vim.git'
 
 " Syntax highlighting for LESS files
 Bundle 'vim-less'
+
+" Qt QML syntax highlighting
+Bundle 'peterhoeg/vim-qml'
 
 " ----------------------------------
 "  Color schemes and visual
