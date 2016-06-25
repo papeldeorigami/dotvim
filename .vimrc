@@ -9,6 +9,9 @@ source ~/.vim/.vundle.vim
 " load neocomplcache plugin settings
 source ~/.vim/.neocomplcache.vim
 
+" load vim-tags settings
+source ~/.vim/.vim-tags.vim
+
 " activate syntax highlight
 syntax on
 
@@ -41,6 +44,9 @@ set foldlevel=1         "this is just what i use
 
 " syntax mapping
 au BufNewFile,BufRead *.deface setlocal ft=html
+
+" set markdown as default filetype for .md files
+au BufNewFile,BufRead *.md setlocal ft=markdown
 
 " activate the wildmenu
 " set wildmenu
@@ -129,3 +135,10 @@ endif
 
 " load custom tags
 set tags+=~/tags,./tags,./../tags,./*/tags  
+
+
+" airline customization
+let g:airline_theme='powerlineish'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_section_z=''
