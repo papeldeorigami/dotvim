@@ -16,10 +16,10 @@ nnoremap <leader>b :BufExplorer<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 
 " easy motion setup - jump to any word on screen
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
-map  <leader>/ <Plug>(easymotion-sn)
-omap <leader>/ <Plug>(easymotion-tn)
+nnoremap s <Plug>(easymotion-s2)
+nnoremap t <Plug>(easymotion-t2)
+nnoremap  <leader>/ <Plug>(easymotion-sn)
+nnoremap <leader>/ <Plug>(easymotion-tn)
 "map  n <Plug>(easymotion-next)
 "map  N <Plug>(easymotion-prev)
 
@@ -61,7 +61,8 @@ nnoremap <C-A-UP> yy p
 "noremap <leader>de  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.exit()<CR>
 "noremap <leader>dd  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.remove_breakpoints()<CR>
 
-set pastetoggle=<leader>p
+"set pastetoggle=<leader>p
+nnoremap <silent> <leader>p :set invpaste<CR>
 
 " zen coding
 let g:user_zen_expandabbr_key = '<leader><TAB>'
