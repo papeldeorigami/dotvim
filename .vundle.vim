@@ -144,7 +144,8 @@ Bundle 'Lokaltog/vim-distinguished.git'
 Bundle 'vim-scripts/eclipse.vim'
 
 " lean & mean status/tabline for vim that's light as air
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
 "...All your other bundles...
 if iCanHazVundle == 0
