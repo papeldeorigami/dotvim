@@ -60,7 +60,7 @@ set hidden
 source ~/.vim/.keymaps.vim
 
 " use the X windows clipboard by default
-set clipboard=unnamedplus
+set clipboard^=unnamedplus
 
 set mouse=a
 
