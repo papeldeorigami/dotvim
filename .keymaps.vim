@@ -1,5 +1,16 @@
 let mapleader = "\<Space>"
 
+" fix for byobu-tmux terminal navigation
+map <ESC>[1;5D <C-Left>
+map <ESC>[1;5C <C-Right>
+map <ESC>[1;5A <C-Up>
+map <ESC>[1;5B <C-Down>
+
+map! <ESC>[1;5D <C-Left>
+map! <ESC>[1;5C <C-Right>
+map! <ESC>[1;5A <C-Up>
+map! <ESC>[1;5B <C-Down>
+
 " Automatically jump to the end of pasted text
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
