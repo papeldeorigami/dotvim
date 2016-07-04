@@ -18,139 +18,143 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " needed for auto-completion; run also: "sudo apt-get install exhuberant-ctags"
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " Required by vim-tags
-Bundle 'tpope/vim-rvm.git'
+Plugin 'tpope/vim-rvm.git'
 
 " vim function library for other plugins
-Bundle 'L9'
+Plugin 'L9'
 
 " ----------------------------------
 "  Navigation enhancements
 " ----------------------------------
 
 " Directory tree navigation (mapped to <LEADER>n)
-Bundle 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 
 " Press <Leader><Leader>w to jump to any word in the screen
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " Easier switch between buffers (mapped to <LEADER>b)
-Bundle 'corntrace/bufexplorer'
+Plugin 'corntrace/bufexplorer'
 
 " (:BUN/:BD/:BW) Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
-Bundle 'bufkill.vim'
+Plugin 'bufkill.vim'
 
 " introduces a command to quit all other buffers (:BufOnly)
-Bundle 'BufOnly.vim'
+Plugin 'BufOnly.vim'
 
 " Fuzzy file, buffer, mru, tag, etc finder
-Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " expand selection progressively with v
-Bundle 'terryma/vim-expand-region'
+Plugin 'terryma/vim-expand-region'
 
 " ----------------------------------
 "  Code editing enhancements
 " ----------------------------------
 
 " automatic ctags update on file save
-Bundle 'szw/vim-tags'
+Plugin 'szw/vim-tags'
 
 " Auto-completion
-Bundle 'Shougo/neocomplcache'
+Plugin 'Shougo/neocomplcache'
 
 " Display a list of Tags in a sidebar
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 
 " automatic closing of quotes, parenthesis, brackets, etc.
-Bundle 'Raimondi/delimitMate.git'
+Plugin 'Raimondi/delimitMate.git'
 
 " comment out code (ctrl+c+space)
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " Syntax checker
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Cool way to replace surrounder characters (try cs"' and ds')
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " eclipse-like tasklist (TODOs in code)
-Bundle 'TaskList.vim'
+Plugin 'TaskList.vim'
 
 " Show ctags list (replaced with TagBar)
-"Bundle 'taglist.vim'
+"Plugin 'taglist.vim'
 
 " Expand HTML tags with CTRL+E
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " snippet support (never used)
-"Bundle 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet'
 
 " fast html coding
-"Bundle 'mattn/emmet-vim.git'
+"Plugin 'mattn/emmet-vim.git'
 
 " Integration with ruby/rails tools
-"Bundle 'tpope/vim-rails.git'
-"Bundle 'tpope/vim-rvm.git'
+"Plugin 'tpope/vim-rails.git'
+"Plugin 'tpope/vim-rvm.git'
 
-"Bundle 'astashov/vim-ruby-debugger.git'
+"Plugin 'astashov/vim-ruby-debugger.git'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
-"Bundle 'renderedtext/vim-bdd.git'
+"Plugin 'renderedtext/vim-bdd.git'
 " Vim ruby refactoring
-"Bundle 'ecomba/vim-ruby-refactoring'
+"Plugin 'ecomba/vim-ruby-refactoring'
 " matchit is required by the vim-ruby-refactoring for some operations
-"Bundle 'edsono/vim-matchit'
+"Plugin 'edsono/vim-matchit'
 
 " ----------------------------------
 "  External tools integration
 " ----------------------------------
 
 " git support
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Ack search (sudo apt-get install ack-grep) 
-"Bundle 'mileszs/ack.vim'
+"Plugin 'mileszs/ack.vim'
+
+" fix terminal keys for tmux
+Plugin 'drmikehenry/vim-fixkey'
+Plugin 'nacitar/terminalkeys.vim'
 
 " ----------------------------------
 "  Syntax highlighting
 " ----------------------------------
 
 " Syntax hightlight for jade files
-Bundle 'digitaltoad/vim-jade.git'
+Plugin 'digitaltoad/vim-jade.git'
 
 " Syntax highlighting for puppet files (SCM)
-Bundle 'puppetlabs/puppet-syntax-vim.git'
+Plugin 'puppetlabs/puppet-syntax-vim.git'
 
 " Syntax highlighting for LESS files
-Bundle 'vim-less'
+Plugin 'vim-less'
 
 " Qt QML syntax highlighting
-Bundle 'peterhoeg/vim-qml'
+Plugin 'peterhoeg/vim-qml'
 
 " ----------------------------------
 "  Color schemes and visual
 " ----------------------------------
 
 " color schemes
-"Bundle 'jaromero/vim-monokai-refined.git'
-Bundle 'Lokaltog/vim-distinguished.git'
-Bundle 'vim-scripts/eclipse.vim'
+"Plugin 'jaromero/vim-monokai-refined.git'
+Plugin 'Lokaltog/vim-distinguished.git'
+Plugin 'vim-scripts/eclipse.vim'
 
 " lean & mean status/tabline for vim that's light as air
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "...All your other bundles...
 if iCanHazVundle == 0
-	echo "Installing Bundles, please ignore key map error messages"
+	echo "Installing Plugins, please ignore key map error messages"
 	echo ""
-	:BundleInstall
+	:PluginInstall
 endif
 
