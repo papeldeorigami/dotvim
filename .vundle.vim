@@ -30,6 +30,9 @@ Bundle 'tpope/vim-rvm.git'
 " vim function library for other plugins
 Bundle 'L9'
 
+" matchit is required by the vim-ruby-refactoring for some operations
+Bundle 'edsono/vim-matchit'
+
 " ----------------------------------
 "  Navigation enhancements
 " ----------------------------------
@@ -96,17 +99,13 @@ Bundle 'TaskList.vim'
 "Bundle 'mattn/emmet-vim.git'
 
 " Integration with ruby/rails tools
-"Bundle 'tpope/vim-rails.git'
-"Bundle 'tpope/vim-rvm.git'
-
-"Bundle 'astashov/vim-ruby-debugger.git'
+Bundle 'tpope/vim-rails.git'
+Bundle 'astashov/vim-ruby-debugger.git'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
-"Bundle 'renderedtext/vim-bdd.git'
+Bundle 'renderedtext/vim-bdd.git'
 " Vim ruby refactoring
-"Bundle 'ecomba/vim-ruby-refactoring'
-" matchit is required by the vim-ruby-refactoring for some operations
-"Bundle 'edsono/vim-matchit'
+Bundle 'ecomba/vim-ruby-refactoring'
 
 " ----------------------------------
 "  External tools integration
@@ -115,8 +114,8 @@ Bundle 'TaskList.vim'
 " git support
 Bundle 'tpope/vim-fugitive'
 
-" Ack search (sudo apt-get install ack-grep) 
-"Bundle 'mileszs/ack.vim'
+" Ack/ag search (sudo apt-get install ack-grep silversearcher-ag) 
+Bundle 'mileszs/ack.vim'
 
 " ----------------------------------
 "  Syntax highlighting

@@ -153,3 +153,11 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'
+
+" ag silversearcher integration using ack plugin
+"let g:ackprg = 'ag --vimgrep --smart-case' 
+let g:ackprg = 'ag --smart-case'
+cnoreabbrev ag Ack                                                                           
+cnoreabbrev aG Ack                                                                           
+cnoreabbrev Ag Ack                                                                           
+cnoreabbrev AG Ack 
