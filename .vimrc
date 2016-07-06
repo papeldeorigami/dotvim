@@ -110,7 +110,7 @@ filetype plugin indent on
 "source ~/.vim/.statusline.vim
 source ~/.vim/.vim-airline.vim
 
-"source ~/.vim/.vim-ruby-debugger.vim
+source ~/.vim/.vim-ruby-debugger.vim
 
 " ---- NERDTree settings ------
 let b:NERDTreeStatusline=-1
@@ -157,7 +157,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 " ag silversearcher integration using ack plugin
 "let g:ackprg = 'ag --vimgrep --smart-case' 
 let g:ackprg = 'ag --smart-case'
-cnoreabbrev ag Ack                                                                           
-cnoreabbrev aG Ack                                                                           
-cnoreabbrev Ag Ack                                                                           
-cnoreabbrev AG Ack 
+"cnoreabbrev ag Ack                                                                           
+"cnoreabbrev aG Ack                                                                           
+"cnoreabbrev Ag Ack                                                                           
+"cnoreabbrev AG Ack 
