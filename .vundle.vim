@@ -99,17 +99,14 @@ Plugin 'TaskList.vim'
 "Plugin 'mattn/emmet-vim.git'
 
 " Integration with ruby/rails tools
-"Plugin 'tpope/vim-rails.git'
-"Plugin 'tpope/vim-rvm.git'
+Plugin 'tpope/vim-rails.git'
 
-"Plugin 'astashov/vim-ruby-debugger.git'
+Plugin 'astashov/vim-ruby-debugger.git'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
-"Plugin 'renderedtext/vim-bdd.git'
+Plugin 'renderedtext/vim-bdd.git'
 " Vim ruby refactoring
-"Plugin 'ecomba/vim-ruby-refactoring'
-" matchit is required by the vim-ruby-refactoring for some operations
-"Plugin 'edsono/vim-matchit'
+Plugin 'ecomba/vim-ruby-refactoring'
 
 " ----------------------------------
 "  External tools integration
@@ -119,7 +116,7 @@ Plugin 'TaskList.vim'
 Plugin 'tpope/vim-fugitive'
 
 " Ack search (sudo apt-get install ack-grep) 
-"Plugin 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
 " fix terminal keys for tmux
 Plugin 'drmikehenry/vim-fixkey'
