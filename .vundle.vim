@@ -119,8 +119,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 
 " fix terminal keys for tmux
-Plugin 'drmikehenry/vim-fixkey'
-Plugin 'nacitar/terminalkeys.vim'
+"Plugin 'drmikehenry/vim-fixkey'
+"Plugin 'nacitar/terminalkeys.vim'
 
 " ----------------------------------
 "  Syntax highlighting
