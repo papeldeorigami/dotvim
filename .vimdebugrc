@@ -1,0 +1,14 @@
+{
+  "vim": {
+    "keys": {
+      "break"    : "C-b",
+      "continue" : "C-c",
+      "down"     : "C-d",
+      "in"       : "C-i",
+      "next"     : "C-n",
+      "out"      : "C-o",
+      "up"       : "C-u"
+    }
+  },
+  "windowmanager": ""
+}

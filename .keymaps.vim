@@ -1,15 +1,24 @@
 let mapleader = "\<Space>"
 
 " fix for byobu-tmux terminal navigation
-map <ESC>[1;5D <C-Left>
-map <ESC>[1;5C <C-Right>
-map <ESC>[1;5A <C-Up>
-map <ESC>[1;5B <C-Down>
+"map <ESC>[1;5D <C-Left>
+"map <ESC>[1;5C <C-Right>
+"map <ESC>[1;5A <C-Up>
+"map <ESC>[1;5B <C-Down>
 
-map! <ESC>[1;5D <C-Left>
-map! <ESC>[1;5C <C-Right>
-map! <ESC>[1;5A <C-Up>
-map! <ESC>[1;5B <C-Down>
+"map! <ESC>[1;5D <C-Left>
+"map! <ESC>[1;5C <C-Right>
+"map! <ESC>[1;5A <C-Up>
+"map! <ESC>[1;5B <C-Down>
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set t_kP=\e[5;*~"
+    execute "set t_kN=\e[6;*~"
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
 
 " Automatically jump to the end of pasted text
 vnoremap <silent> y y`]
@@ -87,6 +96,9 @@ nnoremap tc :tabclose<CR>
 " Buffer navigation
 nnoremap <A-PageUp> :bprevious<CR>
 nnoremap <a-PageDown> :bnext<CR>
+
+" close curreny buffer but not window
+nnoremap <leader>w :BD<CR>
 
 " CtrlP plugin mapping
 "let g:ctrlp_map = '<c-p>'
