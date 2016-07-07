@@ -106,3 +106,4 @@ nnoremap <leader>w :BD<CR>
 " Expand selected region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+

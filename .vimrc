@@ -137,13 +137,6 @@ endif
 " load custom tags
 set tags+=~/tags,./tags,./../tags,./*/tags  
 
-
-" airline customization
-let g:airline_theme='powerlineish'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_section_z=''
-
 " ctrlp customization
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore tmp
@@ -162,3 +155,22 @@ let g:ackprg = 'ag --smart-case'
 "cnoreabbrev aG Ack                                                                           
 "cnoreabbrev Ag Ack                                                                           
 "cnoreabbrev AG Ack 
+
+let g:profiling = 0
+function! s:toggle_profile()
+    if g:profiling
+        profile pause
+        let g:profiling = 0
+        echo "Profile disabled"
+    else
+        profile start profile.log
+        profile file *
+        profile func *
+        let g:profiling = 1
+        echo "Profile enabled"
+    endif
+endfunction
+command! ToggleProfile call s:toggle_profile()
+
+" do not highlight tags by default (very slow on projects with many tags)
+let b:easytags_auto_highlight = 0
