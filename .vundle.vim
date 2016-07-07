@@ -66,7 +66,8 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'szw/vim-tags'
 
 " Auto-completion
-Plugin 'Shougo/neocomplcache'
+"Plugin 'Shougo/neocomplcache'
+Plugin 'Shougo/neocomplete.vim'
 
 " Display a list of Tags in a sidebar
 Plugin 'majutsushi/tagbar'

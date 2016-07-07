@@ -7,7 +7,8 @@ call pathogen#helptags()
 source ~/.vim/.vundle.vim
 
 " load neocomplcache plugin settings
-source ~/.vim/.neocomplcache.vim
+" source ~/.vim/.neocomplcache.vim
+source ~/.vim/.neocomplete.vim
 
 " load vim-tags settings
 source ~/.vim/.vim-tags.vim
@@ -113,7 +114,7 @@ source ~/.vim/.vim-airline.vim
 source ~/.vim/.vim-ruby-debugger.vim
 
 " ---- NERDTree settings ------
-let b:NERDTreeStatusline=-1
+"let b:NERDTreeStatusline=-1
 " load NERDTree after vim initialization is complete
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
