@@ -108,10 +108,9 @@ set noswapfile
 
 filetype plugin indent on
 
-"source ~/.vim/.statusline.vim
 source ~/.vim/.vim-airline.vim
 
-source ~/.vim/.vim-ruby-debugger.vim
+"source ~/.vim/.vim-ruby-debugger.vim
 
 " ---- NERDTree settings ------
 "let b:NERDTreeStatusline=-1
@@ -172,5 +171,8 @@ function! s:toggle_profile()
 endfunction
 command! ToggleProfile call s:toggle_profile()
 
-" do not highlight tags by default (very slow on projects with many tags)
+" easytags customization: do not highlight tags by default (very slow on projects with many tags)
+"let g:easytags_syntax_keyword = 'always'
 let b:easytags_auto_highlight = 0
+let g:easytags_always_enabled = 0
+let g:easytags_on_cursorhold = 0

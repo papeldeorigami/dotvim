@@ -102,7 +102,9 @@ Plugin 'TaskList.vim'
 " Integration with ruby/rails tools
 Plugin 'tpope/vim-rails.git'
 
-Plugin 'astashov/vim-ruby-debugger.git'
+" vim ruby debugger (seems not to work with byebug anymore)
+"Plugin 'astashov/vim-ruby-debugger.git'
+
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
 Plugin 'renderedtext/vim-bdd.git'
