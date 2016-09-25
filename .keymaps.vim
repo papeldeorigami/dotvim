@@ -109,3 +109,19 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " add pry breakpoint (ruby)
 nnoremap <Leader><Leader>b orequire'pry';binding.pry<esc>:w<cr>
+
+" Camel case navigation
+map <silent><C-Left> b
+map <silent><C-Right> w
+map <silent><C-Left> b
+map <silent><C-Right> w
+map <silent><C-Left> b
+map <silent><C-Right> w
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge

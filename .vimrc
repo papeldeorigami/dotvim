@@ -1,10 +1,10 @@
-" pathogen allows to install plugins at the bundle folder (useful for git clone)
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " download and install plugins if folder .vim/bundle is not found
 source ~/.vim/.vundle.vim
+
+" pathogen allows to install plugins at the bundle folder (useful for git clone)
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 
 " load neocomplcache plugin settings
 " source ~/.vim/.neocomplcache.vim
@@ -24,12 +24,12 @@ set showcmd
 set timeoutlen=500
 
 " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.  
-if has("autocmd")  
-   augroup myvimrchooks  
-    au!  
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-  augroup END  
-endif  
+"if has("autocmd")  
+   "augroup myvimrchooks  
+    "au!  
+    "au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  "augroup END  
+"endif  
 
 " folding settings
 set foldcolumn=1
@@ -120,13 +120,13 @@ source ~/.vim/.vim-airline.vim
 " -----------------------------
 
 " set colorscheme
-if has('gui_running')
-    colorscheme eclipse
-else
+"if has('gui_running')
+""    colorscheme eclipse
+"else
 	  " assuming that all terminals have 256 colors
     set t_Co=256
     colorscheme distinguished
-endif
+"endif
 
 " set gvim font
 if has('gui_running')
@@ -177,4 +177,4 @@ let b:easytags_auto_highlight = 0
 let g:easytags_always_enabled = 0
 let g:easytags_on_cursorhold = 0
 let b:easytags_auto_update = 0
-
+let g:easytags_events = []

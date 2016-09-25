@@ -5,6 +5,7 @@ if !filereadable(vundle_readme)
 	echo "Installing Vundle..."
 	echo ""
 	silent !mkdir -p ~/.vim/bundle
+	!~/.vim/install.sh
 	!git clone https://www.github.com/gmarik/vundle ~/.vim/bundle/vundle
 	let iCanHazVundle=0
 endif
@@ -39,6 +40,9 @@ Plugin 'edsono/vim-matchit'
 
 " Directory tree navigation (mapped to <LEADER>n)
 Plugin 'scrooloose/nerdtree.git'
+
+" CamelCase and underline_words navigation
+Plugin 'bkad/CamelCaseMotion'
 
 " Press <Leader><Leader>w to jump to any word in the screen
 Plugin 'Lokaltog/vim-easymotion'
@@ -100,7 +104,9 @@ Plugin 'TaskList.vim'
 "Plugin 'mattn/emmet-vim.git'
 
 " Integration with ruby/rails tools
-Plugin 'tpope/vim-rails.git'
+" disabled - too slow on some ruby files with huge arrays (plus not much
+" helpful to me)
+" Plugin 'tpope/vim-rails.git'
 
 " vim ruby debugger (seems not to work with byebug anymore)
 "Plugin 'astashov/vim-ruby-debugger.git'
@@ -108,8 +114,10 @@ Plugin 'tpope/vim-rails.git'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
 Plugin 'renderedtext/vim-bdd.git'
+
 " Vim ruby refactoring
-Plugin 'ecomba/vim-ruby-refactoring'
+" disabled - too hard to use
+"Plugin 'ecomba/vim-ruby-refactoring'
 
 " ----------------------------------
 "  External tools integration
@@ -148,7 +156,7 @@ Plugin 'peterhoeg/vim-qml'
 " color schemes
 "Plugin 'jaromero/vim-monokai-refined.git'
 Plugin 'Lokaltog/vim-distinguished.git'
-Plugin 'vim-scripts/eclipse.vim'
+"Plugin 'vim-scripts/eclipse.vim'
 
 " lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline'
