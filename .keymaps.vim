@@ -1,5 +1,15 @@
 let mapleader = "\<Space>"
 
+" Make it easier to quit vim ;-)
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
+" Accept semicolon to enter commands
+:nnoremap ; :
+
+
 " fix for byobu-tmux terminal navigation
 "map <ESC>[1;5D <C-Left>
 "map <ESC>[1;5C <C-Right>
@@ -111,17 +121,5 @@ vmap <C-v> <Plug>(expand_region_shrink)
 nnoremap <Leader><Leader>b orequire'pry';binding.pry<esc>:w<cr>
 
 " Camel case navigation
-map <silent><C-Left> b
-map <silent><C-Right> w
-map <silent><C-Left> b
-map <silent><C-Right> w
-map <silent><C-Left> b
-map <silent><C-Right> w
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
+map <silent><C-Left> <Plug>CamelCaseMotion_b
+map <silent><C-Right> <Plug>CamelCaseMotion_w
