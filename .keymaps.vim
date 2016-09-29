@@ -108,7 +108,10 @@ nnoremap <A-PageUp> :bprevious<CR>
 nnoremap <a-PageDown> :bnext<CR>
 
 " close curreny buffer but not window
-nnoremap <leader>w :BD<CR>
+nnoremap <leader>q :BD<CR>
+
+" write file to disk
+nnoremap <leader>w :w<CR>
 
 " CtrlP plugin mapping
 "let g:ctrlp_map = '<c-p>'
