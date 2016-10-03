@@ -126,6 +126,8 @@ source ~/.vim/.vim-airline.vim
 	  " assuming that all terminals have 256 colors
     set t_Co=256
     colorscheme distinguished
+    " set transparent background
+    hi Normal ctermbg=none
 "endif
 
 " set gvim font
