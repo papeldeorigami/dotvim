@@ -91,6 +91,9 @@ Plugin 'tpope/vim-surround'
 " eclipse-like tasklist (TODOs in code)
 Plugin 'TaskList.vim'
 
+" Start a search from visual block selection
+Plugin 'nelstrom/vim-visual-star-search'
+
 " Show ctags list (replaced with TagBar)
 "Plugin 'taglist.vim'
 

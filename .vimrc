@@ -114,9 +114,9 @@ source ~/.vim/.vim-airline.vim
 
 " ---- NERDTree settings ------
 "let b:NERDTreeStatusline=-1
-" load NERDTree after vim initialization is complete
-" autocmd VimEnter * NERDTree
-" autocmd VimEnter * wincmd p
+" load NERDTree after vim initialization is complete if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " -----------------------------
 
 " set colorscheme
