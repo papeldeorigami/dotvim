@@ -9,7 +9,6 @@ let mapleader = "\<Space>"
 " Accept semicolon to enter commands
 :nnoremap ; :
 
-
 " fix for byobu-tmux terminal navigation
 "map <ESC>[1;5D <C-Left>
 "map <ESC>[1;5C <C-Right>
@@ -104,8 +103,8 @@ nnoremap tt :tabedit<CR>
 nnoremap tc :tabclose<CR>
 
 " Buffer navigation
-nnoremap <A-PageUp> :bprevious<CR>
-nnoremap <a-PageDown> :bnext<CR>
+nnoremap [ :bprevious<CR>
+nnoremap ] :bnext<CR>
 
 " close curreny buffer but not window
 nnoremap <leader>q :BD<CR>
@@ -126,3 +125,17 @@ nnoremap <Leader><Leader>b orequire'pry';binding.pry<esc>:w<cr>
 " Camel case navigation
 map <silent><C-Left> <Plug>CamelCaseMotion_b
 map <silent><C-Right> <Plug>CamelCaseMotion_w
+
+" indent/unindent
+noremap <TAB> >>
+noremap <S-TAB> <<
+
+" folding
+noremap + zo
+noremap - zc
+noremap <Leader>+ zO
+noremap <Leader>- zC
+
+" hide all other buffers ("maximize")
+noremap <Leader>m :only<CR>
+noremap <Leader>M :BufOnly<CR>
