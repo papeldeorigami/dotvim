@@ -180,3 +180,8 @@ let g:easytags_always_enabled = 0
 let g:easytags_on_cursorhold = 0
 let b:easytags_auto_update = 0
 let g:easytags_events = []
+
+" autoload MiniBufExplorer
+let g:miniBufExplAutoStart = 0
+let g:miniBufExplBuffersNeeded = 0
+autocmd BufCreate * MBEOpen

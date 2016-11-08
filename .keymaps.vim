@@ -139,3 +139,5 @@ noremap <Leader>- zC
 " hide all other buffers ("maximize")
 noremap <Leader>m :only<CR>
 noremap <Leader>M :BufOnly<CR>
+
+nnoremap <C-B> :MBEOpen<CR>
