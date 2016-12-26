@@ -185,3 +185,7 @@ let g:easytags_events = []
 let g:miniBufExplAutoStart = 0
 let g:miniBufExplBuffersNeeded = 0
 autocmd BufCreate * MBEOpen
+
+" fix nerdtree folder symbol
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
