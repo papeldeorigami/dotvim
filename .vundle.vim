@@ -64,7 +64,7 @@ Plugin 'terryma/vim-expand-region'
 
 " show buffer list (disable vim-airline-tabline, because I wanted click to
 " switch buffers)
-Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'fholgado/minibufexpl.vim'
 
 " ----------------------------------
 "  Code editing enhancements

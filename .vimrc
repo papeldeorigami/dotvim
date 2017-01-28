@@ -182,9 +182,9 @@ let b:easytags_auto_update = 0
 let g:easytags_events = []
 
 " autoload MiniBufExplorer
-let g:miniBufExplAutoStart = 0
-let g:miniBufExplBuffersNeeded = 0
-autocmd BufCreate * MBEOpen
+" let g:miniBufExplAutoStart = 0
+" let g:miniBufExplBuffersNeeded = 0
+"autocmd BufCreate * MBEOpen
 
 " fix nerdtree folder symbol
 let g:NERDTreeDirArrowExpandable = '+'
