@@ -120,7 +120,11 @@ Plugin 'nelstrom/vim-visual-star-search'
 
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
-Plugin 'renderedtext/vim-bdd.git'
+"Plugin 'renderedtext/vim-bdd.git'
+
+
+" Run your tests at the speed of thought
+Plugin 'janko-m/vim-test'
 
 " Vim ruby refactoring
 " disabled - too hard to use

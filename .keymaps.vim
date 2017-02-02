@@ -1,3 +1,7 @@
+"
+"" See also the ftplugin folder for additional, file format specific, keymaps
+"
+
 let mapleader = "\<Space>"
 
 " Make it easier to quit vim ;-)
@@ -75,8 +79,15 @@ vnoremap <A-UP> :m '<-2<CR>gv=gv
 nnoremap <C-A-UP> yy p
 
 " shortcuts for vim-bdd
-map <Leader>; :call RunTest("")<CR>
-map <Leader>' :call RunTestFile("")<CR>
+"map <Leader>; :call RunTest("")<CR>
+"map <Leader>' :call RunTestFile("")<CR>
+
+" shortcuts for vim-test
+nmap <silent> <Leader>; :TestNearest<CR>
+nmap <silent> <Leader>' :TestFile<CR>
+"nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
 
 " ruby debugger keys
 "noremap <leader>db  :call ruby_debugger#load_debugger() <bar> call g:RubyDebugger.toggle_breakpoint()<CR>
@@ -119,9 +130,6 @@ nnoremap <leader>w :w<CR>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-" add pry breakpoint (ruby)
-nnoremap <Leader><Leader>b orequire'pry';binding.pry<esc>:w<cr>
-
 " Camel case navigation
 map <silent><C-Left> <Plug>CamelCaseMotion_b
 map <silent><C-Right> <Plug>CamelCaseMotion_w
@@ -140,4 +148,19 @@ noremap <Leader>- zC
 noremap <Leader>m :only<CR>
 noremap <Leader>M :BufOnly<CR>
 
-nnoremap <C-B> :MBEOpen<CR>
+nnoremap <silent> <C-B> :b#<CR>
+
+" <Leader>f{char} to move to {char}
+"map  <Leader>f <Plug>(easymotion-bd-f)
+"nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+"map <Leader>L <Plug>(easymotion-bd-jk)
+"nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+"map  <Leader>w <Plug>(easymotion-bd-w)
+"nmap <Leader>w <Plug>(easymotion-overwin-w)
