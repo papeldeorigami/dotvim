@@ -32,7 +32,7 @@ Plugin 'tpope/vim-rvm.git'
 Plugin 'L9'
 
 " matchit is required by the vim-ruby-refactoring for some operations
-Plugin 'edsono/vim-matchit'
+"Plugin 'edsono/vim-matchit'
 
 " ----------------------------------
 "  Navigation enhancements
