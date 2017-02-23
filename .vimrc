@@ -2,6 +2,9 @@ filetype off
 " download and install plugins if folder .vim/bundle is not found
 source ~/.vim/.vundle.vim
 
+" Enable rules for command lines substitutions (see command_line_substitutes variable)
+source ~/.vim/.command-line-substitute.vim
+
 " pathogen allows to install plugins at the bundle folder (useful for git clone)
 "call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
@@ -190,3 +193,17 @@ let g:easytags_events = []
 " fix nerdtree folder symbol
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+
+" Command-line substitutions (useful for avoiding Capital letters in function
+" names)
+let g:command_line_substitutes = [
+    \ ['^ag ', 'Ack! '],
+    \ ['^ag$', 'Ack!'],
+    \ ['^h ', 'vertical help '],
+\]
+
+cnoremap <enter> <c-\>eCommandLineSubstitute()<enter><enter>
+
+" enable project-specific vimrc files
+set exrc
+set secure

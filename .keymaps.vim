@@ -104,6 +104,9 @@ nmap <silent> <leader>l :TestLast<CR>
 "set pastetoggle=<leader>p
 nnoremap <silent> <leader>p :set invpaste<CR>
 
+" search with Ack/ag
+nnoremap <leader>a :Ack!<CR>
+
 " zen coding
 let g:user_zen_expandabbr_key = '<leader><TAB>'
 
@@ -164,3 +167,7 @@ nmap s <Plug>(easymotion-overwin-f2)
 " Move to word
 "map  <Leader>w <Plug>(easymotion-bd-w)
 "nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Emulate eclipse C-LeftMouse click behavior to jump to definition
+:noremap <C-LeftMouse> <LeftMouse><C-]>
+
