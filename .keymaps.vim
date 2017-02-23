@@ -122,7 +122,6 @@ nnoremap ] :bnext<CR>
 
 " close curreny buffer but not window
 nnoremap <leader>q :BD<CR>
-nnoremap <C-w> :BD<CR>
 
 " write file to disk
 nnoremap <leader>w :w<CR>
