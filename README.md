@@ -11,7 +11,7 @@ In order to use this, you may clone the git repository as following:
     mv .vim .vim.old
     mv .vimrc .vimrc.old
     git clone https://github.com/papeldeorigami/dotvim ~/.vim
-    ~/install.sh
+    ~/.vim/install.sh
 
 Then just open vim and it will download a bunch of modules and settings, including the color scheme.
 
