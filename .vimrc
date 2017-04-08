@@ -16,6 +16,9 @@ source ~/.vim/.neocomplete.vim
 " load vim-tags settings
 source ~/.vim/.vim-tags.vim
 
+" load vim-test settings
+source ~/.vim/.vim-test.vim
+
 " activate syntax highlight
 syntax on
 
