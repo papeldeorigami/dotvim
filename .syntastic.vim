@@ -1,5 +1,4 @@
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_debug = 3
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
