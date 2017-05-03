@@ -98,6 +98,9 @@ Plugin 'TaskList.vim'
 " Start a search from visual block selection
 Plugin 'nelstrom/vim-visual-star-search'
 
+" Support project-specific eslint installation
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+
 " Show ctags list (replaced with TagBar)
 "Plugin 'taglist.vim'
 
@@ -159,6 +162,10 @@ Plugin 'vim-less'
 
 " Qt QML syntax highlighting
 Plugin 'peterhoeg/vim-qml'
+
+" jsx syntax highlighting and indenting
+Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 " ----------------------------------
 "  Color schemes and visual

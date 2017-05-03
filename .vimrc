@@ -19,6 +19,9 @@ source ~/.vim/.vim-tags.vim
 " load vim-test settings
 source ~/.vim/.vim-test.vim
 
+" load syntastic settings
+source ~/.vim/.syntastic.vim
+
 " activate syntax highlight
 syntax on
 
