@@ -23,6 +23,18 @@ You may want to tweak some settings to your preference (files in the .vim folder
   - .vundle: vim modules. To change/disable modules, remove the folder "bundle" and vim will download everything specified in this file again.
   - .vimrc: the standard vim settings files. Here I define the color scheme to use, for instance.
 
+
+Cheat codes
+-------------------------
+
+- Pretty print JSON file:
+
+    :%!python -m json.tool
+            
+- Show tabs and new lines
+
+    :set list
+
 Author
 -------------------------
 
