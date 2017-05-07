@@ -101,6 +101,9 @@ Plugin 'nelstrom/vim-visual-star-search'
 " Support project-specific eslint installation
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 
+" find and replace in multiple files
+Plugin 'vim-scripts/greplace.vim'
+
 " Show ctags list (replaced with TagBar)
 "Plugin 'taglist.vim'
 

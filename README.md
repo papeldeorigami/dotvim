@@ -35,6 +35,10 @@ Cheat codes
 
     :set list
 
+- Convert empty html tags to self-closing (confirm each case individually to not accidentally change something else)
+
+    :%s#></.*># />#gc
+
 Author
 -------------------------
 
