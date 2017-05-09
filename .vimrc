@@ -200,6 +200,9 @@ let g:easytags_events = []
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
+" fixmyjs settings
+let g:fixmyjs_use_local = 1
+
 " Command-line substitutions (useful for avoiding Capital letters in function
 " names)
 let g:command_line_substitutes = [

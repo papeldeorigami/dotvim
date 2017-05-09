@@ -101,8 +101,15 @@ Plugin 'nelstrom/vim-visual-star-search'
 " Support project-specific eslint installation
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 
+" Automatic eslint fix
+Plugin 'ruanyl/vim-fixmyjs'
+
 " find and replace in multiple files
 Plugin 'vim-scripts/greplace.vim'
+
+" Press crs (coerce to snake_case). MixedCase (crm), camelCase (crc), snake_case (crs),
+" UPPER_CASE (cru), dash-case (cr-), dot.case (cr.), space case (cr<space>), and Title Case (crt)
+Plugin 'tpope/vim-abolish'
 
 " Show ctags list (replaced with TagBar)
 "Plugin 'taglist.vim'
@@ -127,7 +134,6 @@ Plugin 'vim-scripts/greplace.vim'
 " Vim functions to run RSpec and Cucumber on the current cursor or file. It
 " also supports Spork and Zeus.
 "Plugin 'renderedtext/vim-bdd.git'
-
 
 " Run your tests at the speed of thought
 Plugin 'janko-m/vim-test'
