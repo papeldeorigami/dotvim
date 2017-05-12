@@ -159,6 +159,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
 " ag silversearcher integration using ack plugin
 "let g:ackprg = 'ag --vimgrep --smart-case' 
 let g:ackprg = 'ag --smart-case'
@@ -199,6 +202,9 @@ let g:easytags_events = []
 " fix nerdtree folder symbol
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+
+" add an extra space for nerd commenter
+let NERDSpaceDelims=1
 
 " fixmyjs settings
 let g:fixmyjs_use_local = 1
