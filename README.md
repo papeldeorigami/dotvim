@@ -23,10 +23,10 @@ You may want to tweak some settings to your preference (files in the .vim folder
   - .vundle: vim modules. To change/disable modules, remove the folder "bundle" and vim will download everything specified in this file again.
   - .vimrc: the standard vim settings files. Here I define the color scheme to use, for instance.
 
-Installing eslint
+Installing eslint globally
 -------------------------
 
-Run these commands to install eslint based on airbnb config:
+Run these commands to install eslint based on airbnb config globally:
 
     npm install -g eslintme eslint_d fixmyjs
 
