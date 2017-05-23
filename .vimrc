@@ -206,9 +206,6 @@ let g:NERDTreeDirArrowCollapsible = '-'
 " add an extra space for nerd commenter
 let NERDSpaceDelims=1
 
-" fixmyjs settings
-let g:fixmyjs_use_local = 1
-
 " Command-line substitutions (useful for avoiding Capital letters in function
 " names)
 let g:command_line_substitutes = [

@@ -1,6 +1,9 @@
 " vim-tags customization
-if isdirectory('.git') && !filereadable('.git/tags')
-  echo "Generating tags file for the git project..."
-  echo ""
-  autocmd VimEnter * TagsGenerate!
+if isdirectory('.git')
+    if !filereadable('.git/tags')
+        echo "Generating tags file for the git project..."
+        echo ""
+        autocmd VimEnter * silent! TagsGenerate!
+    end
+    autocmd BufWritePost * silent! TagsGenerate!
 endif

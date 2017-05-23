@@ -7,8 +7,10 @@ let mapleader = "\<Space>"
 " Make it easier to quit vim ;-)
 :command WQ wq
 :command Wq wq
+:command Wqa wqa
 :command W w
 :command Q q
+:command Qa qa
 
 " Accept semicolon to enter commands
 :nnoremap ; :
