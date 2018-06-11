@@ -5,5 +5,5 @@ if isdirectory('.git')
         echo ""
         autocmd VimEnter * silent! TagsGenerate!
     end
-    autocmd BufWritePost * silent! TagsGenerate!
+    " autocmd BufWritePost * silent! TagsGenerate!
 endif
