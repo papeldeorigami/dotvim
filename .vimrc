@@ -13,8 +13,8 @@ source ~/.vim/.command-line-substitute.vim
 " source ~/.vim/.neocomplcache.vim
 source ~/.vim/.neocomplete.vim
 
-" load vim-tags settings
-source ~/.vim/.vim-tags.vim
+" load tags settings
+source ~/.vim/.gutentags_plus.vim
 
 " load vim-test settings
 source ~/.vim/.vim-test.vim
@@ -147,6 +147,8 @@ endif
 
 " load custom tags
 set tags+=~/tags,./tags,./../tags,./*/tags  
+" set tags+=/usr/include/**/tags
+" set tags+=~/.vim/.git/cpp_tags
 
 " ctrlp customization
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -187,12 +189,12 @@ endfunction
 command! ToggleProfile call s:toggle_profile()
 
 " easytags customization: do not highlight tags by default (very slow on projects with many tags)
-let g:easytags_syntax_keyword = 'always'
-let b:easytags_auto_highlight = 0
-let g:easytags_always_enabled = 0
-let g:easytags_on_cursorhold = 0
-let b:easytags_auto_update = 0
-let g:easytags_events = []
+" let g:easytags_syntax_keyword = 'always'
+" let b:easytags_auto_highlight = 0
+" let g:easytags_always_enabled = 0
+" let g:easytags_on_cursorhold = 0
+" let b:easytags_auto_update = 0
+" let g:easytags_events = []
 
 " autoload MiniBufExplorer
 " let g:miniBufExplAutoStart = 0

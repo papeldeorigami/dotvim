@@ -23,7 +23,7 @@ Plugin 'gmarik/vundle'
 
 " needed for auto-completion; run also: "sudo apt-get install exhuberant-ctags"
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-easytags'
 
 " Required by vim-tags
 Plugin 'tpope/vim-rvm.git'
@@ -66,12 +66,17 @@ Plugin 'terryma/vim-expand-region'
 " switch buffers)
 " Plugin 'fholgado/minibufexpl.vim'
 
+" marks enhancements
+Plugin 'kshenoy/vim-signature'
+
 " ----------------------------------
 "  Code editing enhancements
 " ----------------------------------
 
 " automatic ctags update on file save
-Plugin 'szw/vim-tags'
+" Plugin 'szw/vim-tags'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'skywind3000/gutentags_plus'
 
 " Auto-completion
 "Plugin 'Shougo/neocomplcache'
