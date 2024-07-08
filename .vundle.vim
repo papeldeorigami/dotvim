@@ -23,7 +23,7 @@ Plugin 'gmarik/vundle'
 
 " needed for auto-completion; run also: "sudo apt-get install exhuberant-ctags"
 Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-easytags'
 
 " Required by vim-tags
 Plugin 'tpope/vim-rvm.git'
@@ -80,7 +80,8 @@ Plugin 'skywind3000/gutentags_plus'
 
 " Auto-completion
 "Plugin 'Shougo/neocomplcache'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/deoplete.nvim'
 
 " Display a list of Tags in a sidebar
 Plugin 'majutsushi/tagbar'

@@ -11,7 +11,7 @@ source ~/.vim/.command-line-substitute.vim
 
 " load neocomplcache plugin settings
 " source ~/.vim/.neocomplcache.vim
-source ~/.vim/.neocomplete.vim
+"source ~/.vim/.neocomplete.vim
 
 " load tags settings
 source ~/.vim/.gutentags_plus.vim
@@ -76,7 +76,7 @@ set hidden
 source ~/.vim/.keymaps.vim
 
 " use the X windows clipboard by default
-set clipboard^=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 set mouse=a
 
